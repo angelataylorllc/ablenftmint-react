@@ -50,7 +50,7 @@ function App() {
             </li>
 
             <li className='my-auto sm:mr-10 md:pr-10 xl:flex xl:mr-0 xl:pr-0'>
-              <a className="bg-indigo-500 py-2 rounded-md sm:px-3 md:py-1 xl:py-4 xl:px-5 " href="#">Connect Wallet</a>
+              <a className="bg-indigo-500 py-2 rounded-md px-3 md:py-1 xl:py-4 xl:px-5 " href="#">Connect Wallet</a>
             </li>
 
           </ul>
