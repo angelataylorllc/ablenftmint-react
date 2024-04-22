@@ -6,5 +6,6 @@ html, body {
 #root {
 
     max-width:fit-content;
+    background-color: rgb(30 27 75);
     padding:0rem;
 }
