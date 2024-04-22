@@ -98,8 +98,8 @@ function App() {
               Understanding ableNFT Solutions</h1>
             <p className='text-gray-300 text-sm text-center leading-loose xl:text-xl xl:leading-9'>It&apos;s time for us to take 
             responsibility for making this world a better place.<br></br>
-            Click <a className='font-bold' href="#"></a> to download our white paper.
-            And <a className='font-bold' href="#">here</a> to download our business plan/road map.</p>
+            Click <a className='font-bold' href="pdfs/WhitePaper.pdf">here</a> to download our white paper.
+            And <a className='font-bold' href="pdfs/RoadMap.pdf">here</a> to download our business plan/road map.</p>
           </div>
 
           <div className='flex flex-col py-10 lg:flex-row lg:justify-center xl:pt-32'>
@@ -151,7 +151,7 @@ function App() {
             <a href=" https://x.com/__able?s=21&t=bytZO---hBasSbKdEwJ6pQ"><img className='w-6 mx-4 sm:mx-10' src= {twicon} /></a>
             </li>
             <li>
-            <a href=" https://x.com/__able?s=21&t=bytZO---hBasSbKdEwJ6pQ"><img className='w-6 mx-4 sm:mx-10' src= {liicon} /></a>
+            <a href=" https://www.linkedin.com/company/able-to-regenerate/"><img className='w-6 mx-4 sm:mx-10' src= {liicon} /></a>
             </li>
             <li>
             <a href="www.instagram.com/abletoshare"><img className='w-6 mx-4 sm:mx-10' src= {inicon} /></a>
@@ -192,7 +192,7 @@ function App() {
               <a href=" https://x.com/__able?s=21&t=bytZO---hBasSbKdEwJ6pQ"><img className='md:w-6 md:mx-10' src= {twicon} /></a>
              </li>
               <li>
-              <a href=" https://x.com/__able?s=21&t=bytZO---hBasSbKdEwJ6pQ"><img className='md:w-6 md:mx-10' src= {liicon} /></a>
+              <a href=" https://www.linkedin.com/company/able-to-regenerate/"><img className='md:w-6 md:mx-10' src= {liicon} /></a>
               </li>
               <li>
               <a href="www.instagram.com/abletoshare"><img className='md:w-6 md:mx-10' src= {inicon} /></a>
