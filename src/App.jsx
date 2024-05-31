@@ -8,59 +8,59 @@ import twicon from '../public/twitter.svg'
 import liicon from '../public/linkedin.svg'
 import inicon from '../public/instagram.svg'
 import hozbar from '../public/horizontal-bar.png'
-import WalletConnect from './components/WalletConnect.jsx'
-import React, { useState, useEffect } from 'react';
-import Web3 from 'web3';
-import MyNFTABI from './abis/MyNFT.json';  // The ABI for your contract
+// import WalletConnect from './components/WalletConnect.jsx'
+// import React, { useState, useEffect } from 'react';
+// import Web3 from 'web3';
+// import MyNFTABI from './abis/MyNFT.json';  // The ABI for your contract
 
 const CONTRACT_ADDRESS = '0x3Aa5ebB10DC797CAC828524e59A333d0A371443c';  // Replace with your contract's address
 
 function App() {
-  const [web3, setWeb3] = useState(null);
-  const [contract, setContract] = useState(null);
-  const [account, setAccount] = useState(null);
-  const [metadataURI, setMetadataURI] = useState(''); // State for the URI input
+  // const [web3, setWeb3] = useState(null);
+  // const [contract, setContract] = useState(null);
+  // const [account, setAccount] = useState(null);
+  // const [metadataURI, setMetadataURI] = useState(''); // State for the URI input
 
-    // Initialize web3 and contract
-    useEffect(() => {
-      if (window.ethereum) {
-        const web3Instance = new Web3(window.ethereum);
-        setWeb3(web3Instance);
-        const contractInstance = new web3Instance.eth.Contract(MyNFTABI, CONTRACT_ADDRESS);
-        setContract(contractInstance);
-        const loadAccount = async () => {
-          const accounts = await web3Instance.eth.requestAccounts();
-          setAccount(accounts[0]);
-        };
-        loadAccount();
-      } else {
-        alert('Please install MetaMask to use this feature.');
-      }
-    }, []);
+  //   // Initialize web3 and contract
+  //   useEffect(() => {
+  //     if (window.ethereum) {
+  //       const web3Instance = new Web3(window.ethereum);
+  //       setWeb3(web3Instance);
+  //       const contractInstance = new web3Instance.eth.Contract(MyNFTABI, CONTRACT_ADDRESS);
+  //       setContract(contractInstance);
+  //       const loadAccount = async () => {
+  //         const accounts = await web3Instance.eth.requestAccounts();
+  //         setAccount(accounts[0]);
+  //       };
+  //       loadAccount();
+  //     } else {
+  //       alert('Please install MetaMask to use this feature.');
+  //     }
+  //   }, []);
 
-    const [tokenId, setTokenId] = useState('123'); // State for the token ID
+  //   const [tokenId, setTokenId] = useState('123'); // State for the token ID
 
-    const mintNFT = async () => {
-      console.log("Mint NFT button clicked!");
-      if (!account || !contract) {
-          alert('Please connect your wallet first.');
-          return;
-      }
-      if (!tokenId) {
-          alert('Please provide a valid token ID.');
-          return;
-      }
-      try {
-          // Construct metadata URI using base URI and token ID
-          const metadataURI = `${baseURI}/${tokenId}`;
-          const transaction = await contract.methods.payToMint(account, metadataURI).send({ from: account, value: web3.utils.toWei('0.05', 'ether') });
-          console.log('Transaction hash:', transaction.transactionHash);
-          alert('NFT minted successfully!');
-      } catch (error) {
-          alert('Minting failed. See console for details.');
-          console.error('Minting error:', error);
-      }
-  };
+  //   const mintNFT = async () => {
+  //     console.log("Mint NFT button clicked!");
+  //     if (!account || !contract) {
+  //         alert('Please connect your wallet first.');
+  //         return;
+  //     }
+  //     if (!tokenId) {
+  //         alert('Please provide a valid token ID.');
+  //         return;
+  //     }
+  //     try {
+  //         // Construct metadata URI using base URI and token ID
+  //         const metadataURI = `${baseURI}/${tokenId}`;
+  //         const transaction = await contract.methods.payToMint(account, metadataURI).send({ from: account, value: web3.utils.toWei('0.05', 'ether') });
+  //         console.log('Transaction hash:', transaction.transactionHash);
+  //         alert('NFT minted successfully!');
+  //     } catch (error) {
+  //         alert('Minting failed. See console for details.');
+  //         console.error('Minting error:', error);
+  //     }
+  // };
   
   
 
@@ -103,7 +103,10 @@ function App() {
             </li>
 
             <li className='my-auto sm:mr-10 md:pr-10 xl:flex xl:mr-0 xl:pr-0'>
-              <WalletConnect />
+            <a className="bg-indigo-500 py-2 rounded-md px-3 md:py-1 xl:py-4 xl:px-5 " href="#">Connect Wallet</a>
+
+              {/* <WalletConnect /> */}
+            
             </li>
 
           </ul>
@@ -129,8 +132,12 @@ function App() {
               NFT Token</span>.</span></h1>
               <p className='text-gray-300 text-sm py-10 sm:pr-48 md:px-0 xl:text-lg 2xl:py-4 2xl:whitespace-nowrap'>
               Now, it is possible to regenerate the planet and make a profit at the same time.</p>
-              <button className='text-white bg-purple-500 w-24 py-2 mx-auto px-3 rounded-md md:mx-24 lg:mx-0 
-              xl:h-16 xl:w-36 xl:text-xl xl:py-5 xl:px-7' onClick={mintNFT}>Mint NFT</button>
+
+              {/* <button className='text-white bg-purple-500 w-24 py-2 mx-auto px-3 rounded-md md:mx-24 lg:mx-0 
+              xl:h-16 xl:w-36 xl:text-xl xl:py-5 xl:px-7' onClick={mintNFT}>Mint NFT</button> */}
+
+              <a className='text-white bg-purple-500 w-24 py-2 mx-auto px-3 rounded-md md:mx-24 lg:mx-0 
+              xl:h-16 xl:w-36 xl:text-xl xl:py-5 xl:px-7'href="#">Mint NFT</a>
            </div>
 
             <div className='flex flex-col md:flex-row md:py-10 lg:flex-col lg:my-32 lg:pr-40 2xl:flex-row 2xl:w-full 2xl:pr-0 2xl:justify-center'>
